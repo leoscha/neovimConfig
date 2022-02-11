@@ -47,6 +47,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
+Plug 'sheerun/vim-polyglot'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -144,7 +146,7 @@ lua <<EOF
   capabilities = capabilities,
  }
 
- require'lspconfig'.solang.setup{
+ require'lspconfig'.solc.setup{
   capabilities = capabilities,
  }
 EOF
