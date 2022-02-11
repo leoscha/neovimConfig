@@ -46,8 +46,6 @@ call plug#begin(stdpath('data').'/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-" Solidity
-Plug 'tomlion/vim-solidity'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -146,7 +144,7 @@ lua <<EOF
   capabilities = capabilities,
  }
 
- require'lspconfig'.solc.setup{
+ require'lspconfig'.solang.setup{
   capabilities = capabilities,
  }
 EOF
