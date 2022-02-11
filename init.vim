@@ -46,6 +46,8 @@ call plug#begin(stdpath('data').'/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+" Solidity
+Plug 'tomlion/vim-solidity'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -56,7 +58,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 " Vimwiki
 Plug 'vimwiki/vimwiki'
 call plug#end()
@@ -137,6 +140,13 @@ lua <<EOF
   capabilities = capabilities,
  }
  require'lspconfig'.emmet_ls.setup {
+  capabilities = capabilities,
+ }
+ require'lspconfig'.pyright.setup{
+  capabilities = capabilities,
+ }
+
+ require'lspconfig'.solc.setup{
   capabilities = capabilities,
  }
 EOF
