@@ -62,6 +62,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 " Vimwiki
 Plug 'vimwiki/vimwiki'
+" Preview for Vimwiki
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 call plug#end()
 
 " Lualine config
